@@ -15,7 +15,7 @@ class Participants(Resource):
 class Professor(Resource):
     def get(self):
         return {
-            'professor': ['Moi moi et toi']
+            'professor': ['Moi moi et toi et qqun']
         }
 
 # Create routes
