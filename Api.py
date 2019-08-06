@@ -26,4 +26,4 @@ api.add_resource(Professor, '/professor')
 
 # Run the application
 if __name__ == '__main__':
-    app.run(host='13.95.158.160', debug=True, port=5000)
+    app.run(host='0.0.0.0', debug=True, port=5000)
