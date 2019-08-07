@@ -15,7 +15,7 @@ class Participants(Resource):
 class Professor(Resource):
     def get(self):
         return {
-            'professor': ['api port as variable']
+            'professor': ['now I work on airflow']
         }
 
 # Create routes
