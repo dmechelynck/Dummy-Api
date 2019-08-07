@@ -15,7 +15,7 @@ class Participants(Resource):
 class Professor(Resource):
     def get(self):
         return {
-            'professor': ['with requirents .txt']
+            'professor': ['testing if sudo kill really works']
         }
 
 # Create routes
