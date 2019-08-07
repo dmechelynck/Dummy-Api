@@ -15,7 +15,7 @@ class Participants(Resource):
 class Professor(Resource):
     def get(self):
         return {
-            'professor': ['testing if sudo kill really works with nothing 3']
+            'professor': ['api port as variable']
         }
 
 # Create routes
