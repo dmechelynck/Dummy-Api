@@ -17,7 +17,7 @@ default_args = {
 
 }
 
-dag = DAG('TimePrinterDag', default_args=default_args, schedule_interval='*/5 * * * *')
+dag = DAG('TimePrinter_Scheduler', default_args=default_args, schedule_interval='*/5 * * * *')
 
 
 t1 = BashOperator(
