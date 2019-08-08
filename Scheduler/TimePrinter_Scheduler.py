@@ -19,8 +19,16 @@ default_args = {
 
 dag = DAG('TimePrinterDag', default_args=default_args, schedule_interval='*/5 * * * *')
 
-# t1, t2 and t3 are examples of tasks created by instantiating operators
+
 t1 = BashOperator(
     task_id='TimePrinter',
     bash_command='python /home/dmechelynck/Builds/Dummy-Api/code/Dummy-Api/TimePrinter.py',
     dag=dag)
+
+t2 = BashOperator(
+    task_id='TimePrinter2',
+    bash_command='python /home/dmechelynck/Builds/Dummy-Api/code/Dummy-Api/TimePrinter.py',
+    dag=dag)
+
+
+t1.set_downstream(t2)
