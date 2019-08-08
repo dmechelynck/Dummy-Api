@@ -23,9 +23,9 @@ class TopoHebdo(Resource):
     def get(self):
         message = """
         Hello Jon, Chris and Julien. This dummy Api is currently hosted on an Azure virtual machine I launched.
-        The Api is really basic but what is really important is that I applied all the best industrialization practices I learnt at Axa.
+        The Api is really basic but what is really important is that I applied all the best industrialization practices I learned at Axa.
 
-        After almost one year at Axa I would like to share what I learned with the rest of the team. Does a training mid-october sound like a good idea?
+        After almost one year at Axa, I would like to share what I learned with the rest of the team. Does a training mid-october sound like a good idea?
 
         Cheers,
 
@@ -43,6 +43,9 @@ api.add_resource(Participants, '/participants')
 
 # Create routes
 api.add_resource(Professor, '/professor')
+
+# Create routes
+api.add_resource(TopoHebdo, '/topohebdo')
 
 # Run the application
 if __name__ == '__main__':
