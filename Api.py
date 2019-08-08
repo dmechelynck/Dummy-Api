@@ -21,17 +21,7 @@ class Professor(Resource):
 class TopoHebdo(Resource):
 
     def get(self):
-        message = """
-        Hello Jon, Chris and Julien. This dummy Api is currently hosted on an Azure virtual machine I launched.
-        The Api is really basic but what is really important is that I applied all the best industrialization practices I learned at Axa.
-
-        After almost one year at Axa, I would like to share what I learned with the rest of the team. Does a training mid-october sound like a good idea?
-
-        Cheers,
-
-        Diego.
-
-        """
+        message = """Hello Jon, Chris and Julien. This dummy Api is currently hosted on an Azure virtual machine I launched. The Api is really basic but what is really important is that I applied all the best industrialization practices I learned at Axa. After almost one year at Axa, I would like to share what I learned with the rest of the team. Does a training mid-october sound like a good idea? Cheers, Diego."""
 
         return {
             'Message': [message],
