@@ -24,7 +24,7 @@ default_args = {
 
 list_of_files = glob.glob('/home/dmechelynck/airflow/dags/*.py')
 latest_file = max(list_of_files, key=os.path.getctime)
-current_file_name=latest_file.split(".")[0]
+current_file_name=os.path.basename(latest_file.split(".")[0])
 
 dag = DAG(current_file_name, default_args=default_args, schedule_interval='*/5 * * * *')
 
