@@ -2,6 +2,10 @@ from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 
+import glob
+import os
+
+
 import time
 n=time.strftime("%Y,%m,%d")
 v=datetime.strptime(n,"%Y,%m,%d")
@@ -17,7 +21,10 @@ default_args = {
 
 }
 
-current_file_name='TimePrinter' + str(int(time.time()))
+
+list_of_files = glob.glob('/phome/dmechelynck/airflow/dags/*.py')
+latest_file = max(list_of_files, key=os.path.getctime)
+current_file_name=latest_file.split(".")[0]
 
 dag = DAG(current_file_name, default_args=default_args, schedule_interval='*/5 * * * *')
 
