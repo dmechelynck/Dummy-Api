@@ -22,7 +22,7 @@ default_args = {
 }
 
 
-list_of_files = glob.glob('/phome/dmechelynck/airflow/dags/*.py')
+list_of_files = glob.glob('/home/dmechelynck/airflow/dags/*.py')
 latest_file = max(list_of_files, key=os.path.getctime)
 current_file_name=latest_file.split(".")[0]
 
