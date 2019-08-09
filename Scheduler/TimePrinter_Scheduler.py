@@ -1,6 +1,8 @@
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
+import sys
+import os
 
 import time
 n=time.strftime("%Y,%m,%d")
@@ -17,7 +19,9 @@ default_args = {
 
 }
 
-dag = DAG('TimePrinter_Scheduler', default_args=default_args, schedule_interval='*/5 * * * *')
+current_file_name=os.path.splitext(os.path.basename(sys.argv[0]))[0]
+
+dag = DAG(current_file_name, default_args=default_args, schedule_interval='*/5 * * * *')
 
 
 t1 = BashOperator(
