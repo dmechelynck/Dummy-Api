@@ -13,3 +13,5 @@ class Test_Squared_Fonctiun(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
+
+
