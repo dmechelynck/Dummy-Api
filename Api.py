@@ -2,6 +2,7 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 from Squared import Squared_Function
+from user import User
 
 # Instantiate the app
 app = Flask(__name__)
@@ -37,6 +38,17 @@ class Squared(Resource):
             'squared number': [str(squared_result)]
         }
 
+
+class Authentificate(Resource):
+    def get(self):
+        username=request.args.get('username')
+        password = request.args.get('password')
+        LoggingUser=User(username, password)
+        return {
+            'authentification status': [LoggingUser.authentificate()]
+        }
+
+
 # Create routes
 api.add_resource(Participants, '/participants')
 
@@ -48,6 +60,9 @@ api.add_resource(TopoHebdo, '/topohebdo')
 
 # Create routes
 api.add_resource(Squared, '/squared')   #To test locally: http://localhost:5000/squared?number=5
+
+# Create routes
+api.add_resource(Authentificate, '/authentificate')   #To test locally: http://localhost:5000/authentificate?username=Diego&password=Agilytic123
 
 # Run the application
 if __name__ == '__main__':
