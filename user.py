@@ -6,7 +6,7 @@ class User:
         self.password = password
 
     def authentificate(self):
-        RegistredUserFile = pd.read_csv("UsersFile.csv")
+        RegistredUserFile = pd.read_csv("Data/UsersFile.csv")
         UserRow = RegistredUserFile[RegistredUserFile["Username"] == self.username]
         if not UserRow.empty:
             if UserRow["Password"].iloc[0] == self.password:
