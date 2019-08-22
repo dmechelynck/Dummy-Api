@@ -19,7 +19,7 @@ class Test_Squared_Fonctiun(unittest.TestCase):
     def test3(self):
         result = Squared_Function(2)
         self.assertEqual(result, 5)
-""" 
+"""  
 
 if __name__ == '__main__':
     unittest.main()
