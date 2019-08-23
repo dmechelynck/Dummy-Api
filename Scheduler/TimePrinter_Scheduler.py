@@ -1,9 +1,11 @@
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
-
-
 import time
+
+
+path_to_vitual_env="/home/dmechelynck/Builds/Dummy-Api/python/bin/python"
+
 n=time.strftime("%Y,%m,%d")
 v=datetime.strptime(n,"%Y,%m,%d")
 default_args = {
@@ -25,7 +27,7 @@ dag = DAG("TimePrinter_Scheduler", default_args=default_args, schedule_interval=
 
 t1 = BashOperator(
     task_id='TimePrinter',
-    bash_command='python /home/dmechelynck/Builds/Dummy-Api/code/Dummy-Api/TimePrinter.py',
+    bash_command = path_to_vitual_env + ' /home/dmechelynck/Builds/Dummy-Api/code/Dummy-Api/TimePrinter.py',
     dag=dag)
 
 t2 = BashOperator(
