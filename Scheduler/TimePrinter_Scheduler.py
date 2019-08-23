@@ -35,5 +35,12 @@ t2 = BashOperator(
     bash_command='echo "done"',
     dag=dag)
 
+t3 = BashOperator(
+    task_id='TimePrinter2',
+    bash_command='echo "third task testing"',
+    dag=dag)
+
 
 t1.set_downstream(t2)
+
+t2.set_downstream(t3)
