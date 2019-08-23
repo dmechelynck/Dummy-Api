@@ -36,7 +36,7 @@ t2 = BashOperator(
     dag=dag)
 
 t3 = BashOperator(
-    task_id='TimePrinter2',
+    task_id='TimePrinter3',
     bash_command='echo "third task testing"',
     dag=dag)
 
