@@ -10,7 +10,7 @@ n=time.strftime("%Y,%m,%d")
 v=datetime.strptime(n,"%Y,%m,%d")
 default_args = {
     'owner': 'airflow',
-    'depends_on_past': True,
+    'depends_on_past': False,
     'start_date': v,
     'email': ['diego@agilytic.be'],
     'email_on_failure': True,
