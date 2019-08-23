@@ -30,7 +30,7 @@ t1 = BashOperator(
 
 t2 = BashOperator(
     task_id='TimePrinter2',
-    bash_command='python /home/dmechelynck/Builds/Dummy-Api/code/Dummy-Api/TimePrinter.py',
+    bash_command='echo "done"',
     dag=dag)
 
 
