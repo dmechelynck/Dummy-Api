@@ -22,11 +22,8 @@ default_args = {
 }
 
 
-list_of_files = glob.glob('/home/dmechelynck/airflow/dags/*.py')
-latest_file = max(list_of_files, key=os.path.getctime)
-current_file_name=os.path.basename(latest_file.split(".")[0])
 
-dag = DAG(current_file_name, default_args=default_args, schedule_interval='*/5 * * * *')
+dag = DAG("TimePrinter_Scheduler", default_args=default_args, schedule_interval='*/5 * * * *')
 
 
 t1 = BashOperator(
