@@ -32,15 +32,13 @@ t1 = BashOperator(
 
 t2 = BashOperator(
     task_id='TimePrinter2',
-    bash_command='echo "done"',
+    bash_command='echo "sending email"',
     dag=dag)
 
 t3 = BashOperator(
     task_id='TimePrinter3',
-    bash_command='echo "third task testing"',
+    bash_command='echo "done"',
     dag=dag)
 
 
-t1.set_downstream(t2)
-
-t2.set_downstream(t3)
+t3.set_upstream([t1, t2])
