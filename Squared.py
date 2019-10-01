@@ -22,6 +22,8 @@ class Test_Squared_Fonctiun(unittest.TestCase):
         
 """
 
+print("Importing means running")
+
 if __name__ == '__main__':
     unittest.main()
 
