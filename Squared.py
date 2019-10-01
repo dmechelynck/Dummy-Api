@@ -1,4 +1,4 @@
-#### The Functio itself:
+#### The Function itself:
 
 def Squared_Function(number):
     return number*number
