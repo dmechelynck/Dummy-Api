@@ -12,7 +12,7 @@ api = Api(app)
 class Info(Resource):
     def get(self):
         return {
-            'Message': ["Welcome on the Diego API!!!! Take a seat and enjoy"],
+            'Message': ["Welcome on the Diego API!!!!"],
             "Available endpoints": ["/participants", "/squared?number=XXXX", "/authentificate?username=XXXX&password=XXXXXXX"]
         }
 
