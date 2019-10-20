@@ -1,4 +1,7 @@
 import pandas as pd
+import os
+
+dirpath = os.path.dirname(os.path.realpath(__file__))
 
 class User:
     def __init__(self, username, password):
@@ -6,7 +9,7 @@ class User:
         self.password = password
 
     def authentificate(self):
-        RegistredUserFile = pd.read_csv("Data/UsersFile.csv")
+        RegistredUserFile = pd.read_csv(dirpath+"/Data/UsersFile.csv")
         UserRow = RegistredUserFile[RegistredUserFile["Username"] == self.username]
         if not UserRow.empty:
             if UserRow["Password"].iloc[0] == self.password:
@@ -21,7 +24,7 @@ class User:
 
 import unittest
 
-class Test_Squared_Fonctiun(unittest.TestCase):
+class Test_User_Class(unittest.TestCase):
     def test1(self):
         User1=User("Diego", "Agilytic123")
         result = User1.authentificate()

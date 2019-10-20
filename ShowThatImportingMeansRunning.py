@@ -1,0 +1,1 @@
+from Squared import Squared_Function
