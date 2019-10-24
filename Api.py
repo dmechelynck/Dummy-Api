@@ -19,7 +19,7 @@ class Info(Resource):
 class Participants(Resource):
     def get(self):
         return {
-            'partcipants': ['Jonathan', 'Nicolas', 'Jerome', 'Julien', 'Elise', 'Christophe', 'Joelle', 'Farah', 'Felix', 'Alex', 'Roxane', 'Marc']
+            'participants': ['Jonathan', 'Nicolas', 'Jerome', 'Julien', 'Elise', 'Christophe - who invited him? Urgh. That guy.', 'Joelle', 'Farah', 'Felix', 'Alex', 'Roxane', 'Marc']
         }
 
 
