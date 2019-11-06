@@ -17,7 +17,7 @@ class Info(Resource):
         }
 
 class Participants(Resource):
-    def get(self)
+    def get(self):
         return {
             'participants': ['Nicolas', 'Jerome', 'Julien - aka The Baiju King', 'Elise', 'Christophe - who invited him? Urgh. That guy.', 'I am manager bitch', 'Farah', 'Alex', 'Roxane', 'Marc']
         }
