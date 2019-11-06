@@ -29,7 +29,7 @@ class Squared(Resource):
         number=float(request.args.get('number'))
         squared_result=Squared_Function(number)
         return {
-            'squared number': ['A lot of Baiju']
+            'squared number': ['A lot of Baiju!']
         }
 
 
