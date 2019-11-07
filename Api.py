@@ -12,14 +12,14 @@ api = Api(app)
 class Info(Resource):
     def get(self):
         return {
-            'Message': ["You are no longer welcome on the Diego API. Mouahahahaha #RigidyticRules"],
+            'Message': ["You are welcome on the Diego API.Unless you are Julien. Julien sucks #RigidyticRules"],
             "Available endpoints": ["/participants", "/squared?number=XXXX", "/authentificate?username=XXXX&password=XXXXXXX"]
         }
 
 class Participants(Resource):
     def get(self):
         return {
-            'participants': ['Nicolas', 'Jerome', 'Julien - aka The Baiju King', 'Elise', 'Christophe - who invited him? Urgh. That guy.', 'I am manager bitch', 'Farah', 'Alex', 'Roxane', 'Marc']
+            'participants': ['Nicolas', 'Jerome', 'Julien - aka The Baiju King', 'Elise', 'Christophe - who invited him? Urgh. That guy.', 'Joëlle', 'Farah', 'Alex', 'Roxane', 'Marc']
         }
 
 
